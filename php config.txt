@@ -1,0 +1,25 @@
+<VirtualHost *:80>
+    DocumentRoot "D:\Work\Hoshang\Project\1to1emarketing_working\user"
+    ServerName hosang.emarketing.working
+
+    <Directory "D:\Work\Hoshang\Project\1to1emarketing_working\user">
+        Order allow,deny
+        AllowOverride All
+        Allow from all
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:443>
+    DocumentRoot "D:\Work\Hoshang\Project\1to1emarketing_working\user"
+    ServerName hosang.emarketing.working
+    SSLEngine On
+	SSLCertificateFile "C:/xampp7.4/apache/conf/ssl.crt/server.crt"
+	SSLCertificateKeyFile "C:/xampp7.4/apache/conf/ssl.key/server.key"
+    <Directory "D:\Work\Hoshang\Project\1to1emarketing_working\user">
+        Order allow,deny
+        AllowOverride All
+        Allow from all
+        Require all granted
+    </Directory>
+</VirtualHost>
